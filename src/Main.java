@@ -40,9 +40,6 @@ public class Main {
                     searchForItem();
                     break;
                 case 6:
-                    processArrayList();
-                    break;
-                case 7:
                     quit = true;
                     break;
             }
@@ -92,5 +89,10 @@ public class Main {
     public static void processArrayList() {
         ArrayList<String> newArray = new ArrayList<>();
         newArray.addAll(groceryList.getGroceryList());
+
+        ArrayList<String> nextArray = new ArrayList<>(groceryList.getGroceryList());
+
+        String[] myArray = new String[groceryList.getGroceryList().size()];
+        myArray = groceryList.getGroceryList().toArray(myArray);
     }
 }
