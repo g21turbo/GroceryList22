@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 // ArrayList - capacity grows automatically vs statically sized arrays
@@ -35,10 +36,13 @@ public class Main {
                 case 4:
                     removeItem();
                     break;
-                case 5 :
+                case 5:
                     searchForItem();
                     break;
                 case 6:
+                    processArrayList();
+                    break;
+                case 7:
                     quit = true;
                     break;
             }
@@ -83,5 +87,10 @@ public class Main {
         } else {
             System.out.println(searchItem + " is not in the grocery list.");
         }
+    }
+
+    public static void processArrayList() {
+        ArrayList<String> newArray = new ArrayList<>();
+        newArray.addAll(groceryList.getGroceryList());
     }
 }
